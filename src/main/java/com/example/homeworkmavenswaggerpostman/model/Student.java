@@ -4,11 +4,10 @@ import javax.persistence.*;
 import java.util.Objects;
 @Entity
 public class Student {
-    @javax.persistence.Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id", nullable = false)
-    private Long id;
     @GeneratedValue
+    @Id
+    private Long id;
+
     private String name;
     private int age;
 
@@ -19,7 +18,9 @@ public class Student {
             this.age = age;
         }
 
+    public Student() {
 
+    }
 
 
     public long getId() {

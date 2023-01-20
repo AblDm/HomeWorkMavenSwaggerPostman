@@ -10,22 +10,27 @@ import java.util.Objects;
 @Entity
 public class Faculty {
     @javax.persistence.Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Id
     @GeneratedValue
+    @Id
+
+
+
 
     private String name;
     private String color;
 
-    public Long getId() {
-        return id;
-    }
+
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public Faculty() {
