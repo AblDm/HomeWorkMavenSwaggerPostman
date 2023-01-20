@@ -1,11 +1,32 @@
 package com.example.homeworkmavenswaggerpostman.model;
 
-import java.util.Objects;
+import org.springframework.data.annotation.Id;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import java.util.Objects;
+@Entity
 public class Faculty {
-    private long id;
+    @javax.persistence.Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", nullable = false)
+    private Long id;
+
+    @Id
+    @GeneratedValue
+
     private String name;
     private String color;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public Faculty() {
     }
@@ -16,9 +37,7 @@ public class Faculty {
         this.color = color;
     }
 
-    public long getId() {
-        return id;
-    }
+
 
     public void setId(long id) {
         this.id = id;

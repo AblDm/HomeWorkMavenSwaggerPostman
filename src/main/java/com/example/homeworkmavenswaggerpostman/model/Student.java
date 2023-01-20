@@ -1,17 +1,26 @@
 package com.example.homeworkmavenswaggerpostman.model;
 
+import javax.persistence.*;
 import java.util.Objects;
-
+@Entity
 public class Student {
-    private long id;
+    @javax.persistence.Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id", nullable = false)
+    private Long id;
+    @GeneratedValue
     private String name;
     private int age;
 
     public Student(long id, String name, int age) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-    }
+
+            this.id = id;
+            this.name = name;
+            this.age = age;
+        }
+
+
+
 
     public long getId() {
         return id;
