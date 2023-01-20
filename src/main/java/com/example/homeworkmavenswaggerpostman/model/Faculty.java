@@ -17,9 +17,6 @@ public class Faculty {
     @GeneratedValue
     @Id
 
-
-
-
     private String name;
     private String color;
 

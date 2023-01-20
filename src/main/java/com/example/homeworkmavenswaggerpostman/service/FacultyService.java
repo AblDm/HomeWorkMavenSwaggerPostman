@@ -26,12 +26,12 @@ public class FacultyService {
         facultyRepository.deleteById(id);
     }
 
-    public Faculty editFaculty (Long id, Faculty faculty) {
-        if (!facultyRepository.findAll().contains(id)) {
-            return null;
-        }
-       return facultyRepository.updateById(id, faculty.getName(),faculty.getColor());
-    }
+//    public Faculty editFaculty (Long id, Faculty faculty) {
+//        if (!facultyRepository.findAll().contains(id)) {
+//            return null;
+//        }
+//       return facultyRepository.updateById(id, faculty.getName(),faculty.getColor());
+//    }
 
 
 
